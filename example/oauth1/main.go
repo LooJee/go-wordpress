@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/LooJee/go-wordpress"
 	"github.com/dghubble/oauth1"
-	"github.com\AndsGo\go-wordpress"
 )
 
 var config oauth1.Config

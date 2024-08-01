@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com\AndsGo\go-wordpress"
+	"github.com/LooJee/go-wordpress"
 )
 
 func getLatestRevisionForPage(t *testing.T, ctx context.Context, page *wordpress.Page) *wordpress.Revision {
