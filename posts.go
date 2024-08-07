@@ -43,6 +43,8 @@ type RenderedString struct {
 	Rendered string `json:"rendered,omitempty"`
 }
 
+type PostMetadata map[string]interface{}
+
 // Post represents a WordPress post.
 type Post struct {
 	collection *PostsService
@@ -71,6 +73,8 @@ type Post struct {
 	Template      string         `json:"template,omitempty"`
 	Title         RenderedString `json:"title,omitempty"`
 	Type          string         `json:"type,omitempty"`
+
+	Meta PostMetadata `json:"meta"`
 }
 
 func (entity *Post) setService(c *PostsService) {

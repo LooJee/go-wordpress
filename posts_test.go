@@ -26,6 +26,7 @@ func factoryPost() wordpress.Post {
 		Status: wordpress.PostStatusDraft,
 		Slug:   "test-posts-create",
 		Author: 1,
+		Meta:   wordpress.PostMetadata{"source": "custom"},
 	}
 }
 
@@ -127,6 +128,8 @@ func TestPostsGet_PostExists(t *testing.T) {
 	if post.ID != postID {
 		t.Errorf("Returned post should have the same ID as specified in Get(), %v != %v", post.ID, postID)
 	}
+
+	t.Logf("Post: %+v", *post)
 }
 func TestPostsGet_PostDoesNotExists(t *testing.T) {
 	wp, ctx := initTestClient()
